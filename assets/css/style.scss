@@ -13,13 +13,36 @@ $bg-color: #E7DEDE;
     img {
         max-width: 100%;
         height: auto;
-        opacity: 0.9;
+        opacity: 0.95;
     }
     
     a {
         text-decoration: none;
         color: $black;
     }
+
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 3.1em;
+        letter-spacing: -3px;
+    }
+
+    h2 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 3.1em;
+        letter-spacing: -3px;
+    }
+
+    h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 2em;
+        letter-spacing: -3px;
+    }
+
+ 
 }
 
 body {
@@ -29,9 +52,13 @@ body {
     header {
         width: 100%;
         text-align: center; 
-        padding: 20px 0;
-        position: sticky;
-        z-index: 2;
+        padding: 10px 0 0 0;
+        position:-webkit-sticky; 
+        position:sticky; 
+        top:0;
+        z-index: 10;
+        background-color: $bg-color;
+        border-bottom: 75% solid black;
 
         .logo {
             font-size: 1.35em;
@@ -46,88 +73,188 @@ body {
     }
 
     main {
-        padding: 20px;
+        overflow: hidden;
 
-        .heading-title {
-            width: fit-content;
-            position: relative;
-
-            div {
-                width: 100%;
-                text-align: right;
-            }
-
-            h1 {
-                font-weight: 700;
-                text-transform: uppercase;
-                font-size: 3.1em;
-                letter-spacing: -3px;
-                margin-left: 5px;
-                line-height: 58px;
-                position: relative;
-                z-index: 5;
-            }
-
-            svg {
-                position: absolute;
-                top: 50%;
-                left: 8%;
-                height: 90px;
-                z-index: 2;
-
-            }
-        }
-
-        .decouvrir {
-            width: 100px;
-            margin: 50px 40px;
-
-            g {
-                transform-origin: center;
-                animation: rotate 7.5s linear infinite;
-            }
-        }
-
-        .galaxy {
-            position: absolute;
-            width: 120px;
-            z-index: 1;
-            top: 38%;
-            right: 5%;
-        }
-
-        .sub-heading {
-            display: flex;
-            align-items: center;
+        .home {
             margin-top: 20px;
+            margin-bottom: 70px;
+            padding: 20px;
 
+            .heading-title {
+                width: fit-content;
+                position: relative;
+    
+                div {
+                    width: 100%;
+                    text-align: right;
+                }
+    
+                h1 {
+                    margin-left: 5px;
+                    line-height: 58px;
+                    position: relative;
+                    z-index: 5;
+                }
+    
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 8%;
+                    height: 90px;
+                    z-index: 2;
+    
+                }
+            }
+    
+            
+    
+            .middle {
+                display: flex;
+                justify-content: space-between;
+
+                .decouvrir {
+                    width: 100px;
+                    margin: 50px 40px;
+        
+                    g {
+                        transform-origin: center;
+                        animation: rotate 7.5s linear infinite;
+                    }
+                }
+    
+                .galaxy {
+                    
+                    width: 130px;
+                    z-index: 1;
+                    top: 38%;
+                    right: 5%;
+                }
+            }
+    
+            
+    
+            .sub-heading {
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+    
+    
+                h2 {
+                    margin-left: 5px;
+                    line-height: 58px;
+                    position: relative;
+                    z-index: 5;
+                    transform: translateX(90px);
+                }
+    
+                .kevin {
+                    width: 160px !important;
+                    position: absolute;
+                }
+                
+            }
+    
+            .sub-texte-1 {
+                margin-top: 40px;
+                margin-left: 10px;
+            }
+            .sub-texte-2 {
+                margin-top: 20px;
+                margin-left: 70%;
+            }
+        }
+
+
+        .outils {
 
             h2 {
-                font-weight: 700;
-                text-transform: uppercase;
-                font-size: 3.1em;
-                letter-spacing: -3px;
-                margin-left: 5px;
-                line-height: 58px;
-                position: relative;
-                z-index: 5;
-                transform: translateX(90px);
+                margin-left: 15px;
+
             }
 
-            .kevin {
-                width: 160px !important;
-                position: absolute;
+            .texte-outils {
+                border-left: 1px solid rgba(0, 0, 0, 0.404);
+                padding: 25px;
+                margin-top: 30px;
+                margin-left: 50px;
             }
             
-        }
+            .slide-skills {
+                width: 100%;
 
-        .sub-texte-1 {
-            margin-top: 40px;
-            margin-left: 10px;
-        }
-        .sub-texte-2 {
-            margin-top: 20px;
-            margin-left: 70%;
+                div {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    border: 1px solid rgba(0, 0, 0, 0.404);
+                    padding: 20px 0;
+
+                    p {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 1.2em;
+                    }
+                }
+
+                div:nth-child(1) {
+                }
+
+                div:nth-child(2) {
+                    border-top: none;
+                }
+            }
+
+            .more-about {
+                display: flex;
+                justify-content: space-evenly;
+                padding: 20px;
+                flex-direction: column;
+
+                .titre-about {
+                    width: fit-content;
+                    position: relative;
+
+                    svg {
+                        position: absolute;
+                        top: 35%;
+                        left: 8%;
+                        height: 100px;
+                        z-index: 2;
+                    }
+
+                    h3 {
+                        position: relative;
+                        z-index: 5;
+                        margin-top: 70px;
+                        transform: translateX(50px);
+                    }
+
+                }
+
+                .cv {
+                    position: relative;
+                    z-index: 5;
+                    margin-top: 70px;
+                    margin-left: auto;
+                    margin-right: 30px;
+
+                    a {
+                        text-transform: uppercase;
+                        padding: 10px 20px;
+                        border: 1px solid rgba(0, 0, 0, 0.404);
+                        display: block;
+                        width: fit-content;
+                        margin-top: 25px;
+
+                        &:hover {
+                            border-color: $black;
+                            background-color: $black;
+                            color: $bg-color;
+                        }
+                    }
+
+                }
+            }
         }
     }
 }
