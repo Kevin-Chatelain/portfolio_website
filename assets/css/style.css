@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Karla", sans-serif;
   letter-spacing: -1px;
+  transition: 0.2s;
 }
 * img {
   max-width: 100%;
@@ -132,6 +133,9 @@ body main .home .sub-texte-2 {
   margin-top: 20px;
   margin-left: 70%;
 }
+body main .outils {
+  margin-bottom: 70px;
+}
 body main .outils h2 {
   margin-left: 15px;
 }
@@ -200,11 +204,72 @@ body main .outils .more-about .cv a {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 25px;
+  margin-left: auto;
 }
 body main .outils .more-about .cv a:hover {
   border-color: #000;
   background-color: #000;
   color: #E7DEDE;
+}
+body main .projets h2 {
+  margin-left: 15px;
+}
+body main .projets .projets-uni .projets-container {
+  width: 90%;
+  margin: 30px auto;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  overflow: hidden;
+}
+body main .projets .projets-uni .projets-container > div {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body main .projets .projets-uni .projets-container > div img {
+  height: 100% !important;
+}
+body main .projets .projets-uni .projets-container > div .projets-texte {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #E7DEDE;
+  text-align: left;
+  padding: 25px;
+  opacity: 0;
+}
+body main .projets .projets-uni .projets-container > div .projets-texte h3 {
+  margin-bottom: 10px;
+}
+body main .projets .projets-uni .projets-container > div .projets-texte p {
+  margin-bottom: 10px;
+}
+body main .projets .projets-uni .projets-container > div .projets-texte a {
+  position: absolute;
+  color: #E7DEDE;
+  font-weight: 500;
+  text-decoration: underline;
+  bottom: 20px;
+}
+body main .projets .projets-uni .projets-container > div .projets-texte:hover {
+  -webkit-animation: fade-in 0.5s forwards ease-out;
+          animation: fade-in 0.5s forwards ease-out;
+}
+
+.fadein {
+  -webkit-animation: fade-in 0.5s ease-in forwards;
+          animation: fade-in 0.5s ease-in forwards;
+}
+
+.fadeout {
+  animation: fade-in 0.5s ease-in forwards reverse;
 }
 
 @-webkit-keyframes rotate {
@@ -222,5 +287,57 @@ body main .outils .more-about .cv a:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes projets-apparition {
+  0% {
+    filter: opacity(0);
+    transform: translateX(-50%) translateY(-200px);
+  }
+  100% {
+    filter: opacity(1);
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+@keyframes projets-apparition {
+  0% {
+    filter: opacity(0);
+    transform: translateX(-50%) translateY(-200px);
+  }
+  100% {
+    filter: opacity(1);
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
