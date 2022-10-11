@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +10,12 @@
   font-family: "Karla", sans-serif;
   letter-spacing: -1px;
   transition: 0.2s;
+}
+* ::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.404);
+}
+* ::selection {
+  background-color: rgba(0, 0, 0, 0.404);
 }
 * img {
   max-width: 100%;
@@ -32,7 +42,7 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 2em;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
 }
 
 body {
@@ -58,6 +68,10 @@ body header nav {
   display: flex;
   padding: 15px;
   justify-content: space-around;
+}
+body header nav a:hover {
+  font-weight: 700;
+  transform: scale(1.1, 1.1);
 }
 body main {
   overflow: hidden;
@@ -214,25 +228,23 @@ body main .outils .more-about .cv a:hover {
 body main .projets h2 {
   margin-left: 15px;
 }
-body main .projets .projets-uni .projets-container {
+body main .projets .projets .projets-container {
   width: 90%;
   margin: 30px auto;
   gap: 10px;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   overflow: hidden;
 }
-body main .projets .projets-uni .projets-container > div {
+body main .projets .projets .projets-container > div {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-body main .projets .projets-uni .projets-container > div img {
+body main .projets .projets .projets-container > div img {
   height: 100% !important;
 }
-body main .projets .projets-uni .projets-container > div .projets-texte {
+body main .projets .projets .projets-container > div .projets-texte {
   position: absolute;
   top: 0;
   width: 100%;
@@ -245,22 +257,144 @@ body main .projets .projets-uni .projets-container > div .projets-texte {
   padding: 25px;
   opacity: 0;
 }
-body main .projets .projets-uni .projets-container > div .projets-texte h3 {
+body main .projets .projets .projets-container > div .projets-texte h3 {
   margin-bottom: 10px;
 }
-body main .projets .projets-uni .projets-container > div .projets-texte p {
+body main .projets .projets .projets-container > div .projets-texte p {
   margin-bottom: 10px;
 }
-body main .projets .projets-uni .projets-container > div .projets-texte a {
+body main .projets .projets .projets-container > div .projets-texte a {
   position: absolute;
   color: #E7DEDE;
   font-weight: 500;
   text-decoration: underline;
   bottom: 20px;
 }
-body main .projets .projets-uni .projets-container > div .projets-texte:hover {
+body main .projets .projets .projets-container > div .projets-texte:hover {
   -webkit-animation: fade-in 0.5s forwards ease-out;
           animation: fade-in 0.5s forwards ease-out;
+}
+body main .projets .projets-uni .projets-container {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+body main .projets .projets-transition {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px 20px 20px 30px;
+  align-items: center;
+}
+body main .projets .projets-transition .projets-ligne p {
+  margin: 10px 0;
+}
+body main .projets .projets-transition .projets-ligne svg {
+  width: 1px;
+  height: 200px;
+}
+body main .projets .projets-transition .projets-sous-titre {
+  transform: translateX(20px);
+}
+body main .projets .projets-transition .projets-sous-titre svg {
+  position: absolute;
+  z-index: 2;
+  top: -100%;
+  right: -10px;
+  width: 150px;
+}
+body main .projets .projets-perso .projets-container {
+  margin: 10px auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+}
+body main .contact {
+  margin: 70px 0 50px 20px;
+}
+body main .contact .contact-texte {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 50px 20px 50px auto;
+}
+body main .contact .coordonnees {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 80px auto;
+}
+body main .contact .coordonnees svg {
+  position: absolute;
+  top: -20%;
+  width: 120px;
+  right: 20px;
+}
+body main .contact .coordonnees h3 {
+  margin-bottom: 10px;
+}
+body main .contact .coordonnees a {
+  display: block;
+  margin: 5px;
+}
+body main .contact .contact-form {
+  width: 95%;
+  margin: 30px 20px 30px auto;
+}
+body main .contact .contact-form * {
+  display: block;
+}
+body main .contact .contact-form > div:nth-child(1) {
+  display: flex;
+}
+body main .contact .contact-form label {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 1em;
+  font-weight: 700;
+}
+body main .contact .contact-form input, body main .contact .contact-form textarea {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+  background-color: #E7DEDE;
+}
+body main .contact .contact-form input:not(input[type=submit]) {
+  height: 30px;
+}
+body main .contact .contact-form div {
+  margin-bottom: 15px;
+}
+body main .contact .contact-form .prenom, body main .contact .contact-form .nom {
+  width: 50%;
+}
+body main .contact .contact-form .prenom input, body main .contact .contact-form .nom input {
+  width: 100%;
+}
+body main .contact .contact-form .nom {
+  margin-right: 15px;
+}
+body main .contact .contact-form .email input, body main .contact .contact-form .email textarea, body main .contact .contact-form .message input, body main .contact .contact-form .message textarea {
+  width: 100%;
+}
+body main .contact .contact-form input[type=submit] {
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 8px 15px;
+  font-size: 1.1em;
+}
+body main .contact .contact-form input[type=submit]:hover {
+  background-color: #000;
+  color: #E7DEDE;
+}
+body footer {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
 .fadein {
