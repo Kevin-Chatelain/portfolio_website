@@ -94,7 +94,6 @@ body {
 
         .home {
             margin-top: 20px;
-            margin-bottom: 70px;
             padding: 20px;
 
             .heading-title {
@@ -184,7 +183,7 @@ body {
 
         .outils {
 
-            margin-bottom: 70px;
+            padding-top: 100px;
 
             h2 {
                 margin-left: 15px;
@@ -201,17 +200,35 @@ body {
             .slide-skills {
                 width: 100%;
 
-                div {
+                &>div {
                     display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-                    border: 1px solid rgba(0, 0, 0, 0.404);
-                    padding: 20px 0;
+                    width: 100%;
+                    border-top: 1px solid rgba(0, 0, 0, 0.404);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.404);
+                       
+                    .slide-skill-container {
+                        display: flex;
+                        align-items: center;
+                        padding: 20px 0;
+                        width: fit-content;
+                        animation: skill-sliding 25s linear infinite;
 
-                    p {
-                        text-transform: uppercase;
-                        font-weight: 700;
-                        font-size: 1.2em;
+
+                        p {
+                            text-transform: uppercase;
+                            font-weight: 700;
+                            margin: 0 20px;
+                            font-size: 1.2em;
+                            width: fit-content;
+                            white-space: nowrap;
+                        }
+
+                    }   
+                }
+
+                &>div:nth-child(2) {
+                    .slide-skill-container {
+                        animation: skill-sliding 25s linear infinite reverse;
                     }
                 }
 
@@ -275,13 +292,12 @@ body {
         }
 
         .projets {
-            
+
             h2 {
                 margin-left: 15px;
             }
 
-            .projets {
-
+            .projets-block {
                 .projets-container {
                     width: 90%;
                     margin: 30px auto;
@@ -387,8 +403,13 @@ body {
             }
         }
 
+        #projets {
+            padding-top: 100px;
+        }
+
         .contact {
-            margin: 70px 0 50px 20px;
+            margin: 0px 0 50px 20px;
+            padding-top: 100px;
             
             .contact-texte {
                 width: fit-content;
@@ -508,6 +529,11 @@ body {
     animation: fade-in 0.5s ease-in forwards reverse;
 }
 
+.active-header {
+    font-weight: 700;
+    transform: scale(1.1, 1.1);
+}
+
 
 
 
@@ -515,6 +541,18 @@ body {
 
 
 // Animations 
+
+
+
+@keyframes skill-sliding {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 @keyframes rotate {
     0% {
