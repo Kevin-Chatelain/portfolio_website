@@ -1,0 +1,289 @@
+h1 {
+    font-size: 7.5em;
+    line-height: 130px;
+}
+
+h2 {
+    font-size: 6em;
+}
+
+h3 {
+    font-size: 4.5em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+body {
+
+
+
+    header {
+        display: flex;
+        justify-content: space-between !important;
+        padding: 20px 60px !important;
+
+        nav {
+            justify-content: space-evenly;
+            width: unset !important;
+
+            a {
+                margin: 0 20px;
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    main {
+
+        .home {
+
+
+            .top-container {
+
+                padding: 0 60px;
+                ;
+                display: flex;
+                justify-content: space-between;
+                padding-right: 150px;
+
+                .heading-title {
+                    svg {
+                        height: 180px !important;
+                        top: 50% !important;
+                    }
+                }
+
+                .middle {
+                    align-items: end;
+
+                    a {
+                        svg {
+                            margin: 0 !important;
+                            width: 120px !important;
+                            transform: translateX(-12vw);
+                        }
+                    }
+
+                    .galaxy {
+                        width: 350px !important;
+                    }
+                }
+            }
+
+
+            .sub-heading {
+
+                justify-content: left;
+                margin-top: 60px;
+
+                h3 {
+                    font-size: 6.5em !important;
+                    line-height: 50px;
+                    transform: translateY(-40px);
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                .kevin {
+                    width: 280px !important;
+                    margin-left: 80px;
+                    margin-right: 50px !important;
+                }
+
+            }
+
+            .bottom-heading {
+                margin-right: 40px;
+                width: 65%;
+                margin-left: auto !important;
+                transform: translateY(-150px);
+
+
+                .sub-texte {
+                    display: flex;
+
+                    p {
+                        margin: 0 80px !important;
+                    }
+                }
+
+                .scroll-arrow-down {
+                    svg {
+                        height: 200px !important;
+                    }
+                }
+            }
+        }
+
+        .outils {
+            padding-top: 0;
+
+            h2 {
+                margin-left: 60px;
+                margin-bottom: 100px;
+            }
+
+            .texte-outils {
+                margin-left: 35%;
+                width: 50%;
+                font-size: 1.2em;
+                padding: 80px;
+            }
+
+            .slide-skills {
+                width: 100%;
+
+                &>div {
+                    .slide-skill-container {
+                        p {
+                            margin: 0 40px;
+                            font-size: 2em;
+
+                        }
+
+                    }   
+                }
+            }
+
+            .more-about {
+                flex-direction: row;
+                margin-top: 50px;
+
+                .titre-about {
+                    svg {
+                        height: 200px;
+                        top: 25%;
+                    }
+
+                    h3 {
+                        transform: translateX(150px);
+                    }
+                }
+
+                .cv {
+                    margin-right: 150px;
+                    p {
+                        font-size: 1.45em;
+                    }
+                    a {
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+
+        .projets {
+            padding: 0 60px;
+
+            h2 {
+                margin-top: 100px;
+                margin-left: 0;
+            }
+
+            .projets-block {
+                .projets-container {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 50px;
+                    width: 100%;
+                }
+            }
+
+            .projets-transition {
+                width: 100%;
+                justify-content: space-between;
+                margin: 40px 0;
+                .projets-ligne {
+                    margin-left: 50px;
+                    p {
+                        margin: 10px 0;
+                        font-size: 1.4em;
+                    }
+                    svg {
+                        width: 2px;
+                        height: 400px;
+                    }
+                }
+
+                .projets-sous-titre {
+
+                    h3 {
+                        margin-right: 100px;
+                    }
+
+                    svg {
+                        width: 300px;
+                        top: -60%;
+                        left: -200px;
+                    }
+                }
+            }
+
+            .projets-perso {
+                .projets-container {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 10px;
+                }
+            } 
+        }
+
+        .contact {
+            padding: 0 60px;
+            margin-top: 200px;
+            h2 {
+                br {
+                    display: none;
+                }
+            }
+
+            .contact-texte {
+                margin: 75px 0 60px 80px;
+            }
+
+            .contact-infos-container  {
+                align-items: center;
+                display: flex;
+                .coordonnees {
+                    width: 60%;
+                    margin-left: 80px;
+                    
+                    svg {
+                        right: 35%;
+                        width: 250px;
+                    }
+
+                    a {
+                        font-size: 1.5em;
+                        margin: 20px 0;
+                    }
+                }
+
+                .contact-form {
+                    width: 40%;
+
+                    label {
+                        font-size: 1.4em;
+                    }
+
+                    input:not(input[type="submit"]) {
+                        height: 40px;
+                        font-size: 1.2em;
+                    }
+                    
+                    textarea {
+                        height: 300px;
+                    }
+
+                    input[type = "submit"] {
+                        font-size: 1.5em;
+                        padding: 12px 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}

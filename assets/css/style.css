@@ -71,7 +71,6 @@ body header nav {
 }
 body header nav a:hover {
   font-weight: 700;
-  transform: scale(1.1, 1.1);
 }
 body main {
   overflow: hidden;
@@ -80,23 +79,22 @@ body main .home {
   margin-top: 20px;
   padding: 20px;
 }
-body main .home .heading-title {
+body main .home .top-container .heading-title {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
 }
-body main .home .heading-title div {
+body main .home .top-container .heading-title div {
   width: 100%;
   text-align: right;
 }
-body main .home .heading-title h1 {
+body main .home .top-container .heading-title h1 {
   margin-left: 5px;
-  line-height: 58px;
   position: relative;
   z-index: 5;
 }
-body main .home .heading-title svg {
+body main .home .top-container .heading-title svg {
   position: absolute;
   top: 50%;
   left: 8%;
@@ -125,26 +123,30 @@ body main .home .middle .galaxy {
 body main .home .sub-heading {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
-body main .home .sub-heading h2 {
+body main .home .sub-heading h3 {
   margin-left: 5px;
-  line-height: 58px;
+  font-size: 2.2em;
   position: relative;
   z-index: 5;
-  transform: translateX(90px);
+  line-height: 35px;
 }
 body main .home .sub-heading .kevin {
-  width: 160px !important;
-  position: absolute;
+  width: 160px;
+  margin-right: 20px;
 }
-body main .home .sub-texte-1 {
-  margin-top: 40px;
+body main .home .bottom-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
   margin-left: 10px;
 }
-body main .home .sub-texte-2 {
-  margin-top: 20px;
-  margin-left: 70%;
+body main .home .bottom-heading .sub-texte p {
+  margin: 15px 0;
+}
+body main .home .bottom-heading .scroll-arrow-down svg {
+  height: 100px;
 }
 body main .outils {
   padding-top: 100px;
@@ -323,7 +325,7 @@ body main .projets .projets-transition .projets-sous-titre svg {
 }
 body main .projets .projets-perso .projets-container {
   margin: 10px auto;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-auto-flow: dense;
 }
@@ -340,73 +342,73 @@ body main .contact .contact-texte {
   width: fit-content;
   margin: 50px 20px 50px auto;
 }
-body main .contact .coordonnees {
+body main .contact .contact-infos-container .coordonnees {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 80px auto;
 }
-body main .contact .coordonnees svg {
+body main .contact .contact-infos-container .coordonnees svg {
   position: absolute;
   top: -20%;
   width: 120px;
   right: 20px;
 }
-body main .contact .coordonnees h3 {
+body main .contact .contact-infos-container .coordonnees h3 {
   margin-bottom: 10px;
 }
-body main .contact .coordonnees a {
+body main .contact .contact-infos-container .coordonnees a {
   display: block;
   margin: 5px;
 }
-body main .contact .contact-form {
+body main .contact .contact-infos-container .contact-form {
   width: 95%;
   margin: 30px 20px 30px auto;
 }
-body main .contact .contact-form * {
+body main .contact .contact-infos-container .contact-form * {
   display: block;
 }
-body main .contact .contact-form > div:nth-child(1) {
+body main .contact .contact-infos-container .contact-form > div:nth-child(1) {
   display: flex;
 }
-body main .contact .contact-form label {
+body main .contact .contact-infos-container .contact-form label {
   text-transform: uppercase;
   color: #000;
   font-size: 1em;
   font-weight: 700;
 }
-body main .contact .contact-form input, body main .contact .contact-form textarea {
+body main .contact .contact-infos-container .contact-form input, body main .contact .contact-infos-container .contact-form textarea {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.404);
   background-color: #E7DEDE;
 }
-body main .contact .contact-form input:not(input[type=submit]) {
+body main .contact .contact-infos-container .contact-form input:not(input[type=submit]) {
   height: 30px;
 }
-body main .contact .contact-form div {
+body main .contact .contact-infos-container .contact-form div {
   margin-bottom: 15px;
 }
-body main .contact .contact-form .prenom, body main .contact .contact-form .nom {
+body main .contact .contact-infos-container .contact-form .prenom, body main .contact .contact-infos-container .contact-form .nom {
   width: 50%;
 }
-body main .contact .contact-form .prenom input, body main .contact .contact-form .nom input {
+body main .contact .contact-infos-container .contact-form .prenom input, body main .contact .contact-infos-container .contact-form .nom input {
   width: 100%;
 }
-body main .contact .contact-form .nom {
+body main .contact .contact-infos-container .contact-form .nom {
   margin-right: 15px;
 }
-body main .contact .contact-form .email input, body main .contact .contact-form .email textarea, body main .contact .contact-form .message input, body main .contact .contact-form .message textarea {
+body main .contact .contact-infos-container .contact-form .email input, body main .contact .contact-infos-container .contact-form .email textarea, body main .contact .contact-infos-container .contact-form .message input, body main .contact .contact-infos-container .contact-form .message textarea {
   width: 100%;
 }
-body main .contact .contact-form input[type=submit] {
+body main .contact .contact-infos-container .contact-form input[type=submit] {
   border: 1px solid rgba(0, 0, 0, 0.404);
   text-transform: uppercase;
   font-weight: 700;
   padding: 8px 15px;
   font-size: 1.1em;
 }
-body main .contact .contact-form input[type=submit]:hover {
+body main .contact .contact-infos-container .contact-form input[type=submit]:hover {
   background-color: #000;
   color: #E7DEDE;
 }
@@ -515,4 +517,19 @@ body footer {
   100% {
     opacity: 1;
   }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #272727;
 }/*# sourceMappingURL=style.css.map */

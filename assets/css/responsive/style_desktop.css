@@ -1,0 +1,206 @@
+h1 {
+  font-size: 7.5em;
+  line-height: 130px;
+}
+
+h2 {
+  font-size: 6em;
+}
+
+h3 {
+  font-size: 4.5em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+body header {
+  display: flex;
+  justify-content: space-between !important;
+  padding: 20px 60px !important;
+}
+body header nav {
+  justify-content: space-evenly;
+  width: unset !important;
+}
+body header nav a {
+  margin: 0 20px;
+  font-size: 1.2em;
+}
+body main .home .top-container {
+  padding: 0 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 150px;
+}
+body main .home .top-container .heading-title svg {
+  height: 180px !important;
+  top: 50% !important;
+}
+body main .home .top-container .middle {
+  align-items: end;
+}
+body main .home .top-container .middle a svg {
+  margin: 0 !important;
+  width: 120px !important;
+  transform: translateX(-12vw);
+}
+body main .home .top-container .middle .galaxy {
+  width: 350px !important;
+}
+body main .home .sub-heading {
+  justify-content: left;
+  margin-top: 60px;
+}
+body main .home .sub-heading h3 {
+  font-size: 6.5em !important;
+  line-height: 50px;
+  transform: translateY(-40px);
+}
+body main .home .sub-heading h3 br {
+  display: none;
+}
+body main .home .sub-heading .kevin {
+  width: 280px !important;
+  margin-left: 80px;
+  margin-right: 50px !important;
+}
+body main .home .bottom-heading {
+  margin-right: 40px;
+  width: 65%;
+  margin-left: auto !important;
+  transform: translateY(-150px);
+}
+body main .home .bottom-heading .sub-texte {
+  display: flex;
+}
+body main .home .bottom-heading .sub-texte p {
+  margin: 0 80px !important;
+}
+body main .home .bottom-heading .scroll-arrow-down svg {
+  height: 200px !important;
+}
+body main .outils {
+  padding-top: 0;
+}
+body main .outils h2 {
+  margin-left: 60px;
+  margin-bottom: 100px;
+}
+body main .outils .texte-outils {
+  margin-left: 35%;
+  width: 50%;
+  font-size: 1.2em;
+  padding: 80px;
+}
+body main .outils .slide-skills {
+  width: 100%;
+}
+body main .outils .slide-skills > div .slide-skill-container p {
+  margin: 0 40px;
+  font-size: 2em;
+}
+body main .outils .more-about {
+  flex-direction: row;
+  margin-top: 50px;
+}
+body main .outils .more-about .titre-about svg {
+  height: 200px;
+  top: 25%;
+}
+body main .outils .more-about .titre-about h3 {
+  transform: translateX(150px);
+}
+body main .outils .more-about .cv {
+  margin-right: 150px;
+}
+body main .outils .more-about .cv p {
+  font-size: 1.45em;
+}
+body main .outils .more-about .cv a {
+  font-size: 1.2em;
+}
+body main .projets {
+  padding: 0 60px;
+}
+body main .projets h2 {
+  margin-top: 100px;
+  margin-left: 0;
+}
+body main .projets .projets-block .projets-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 100%;
+}
+body main .projets .projets-transition {
+  width: 100%;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+body main .projets .projets-transition .projets-ligne {
+  margin-left: 50px;
+}
+body main .projets .projets-transition .projets-ligne p {
+  margin: 10px 0;
+  font-size: 1.4em;
+}
+body main .projets .projets-transition .projets-ligne svg {
+  width: 2px;
+  height: 400px;
+}
+body main .projets .projets-transition .projets-sous-titre h3 {
+  margin-right: 100px;
+}
+body main .projets .projets-transition .projets-sous-titre svg {
+  width: 300px;
+  top: -60%;
+  left: -200px;
+}
+body main .projets .projets-perso .projets-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+body main .contact {
+  padding: 0 60px;
+  margin-top: 200px;
+}
+body main .contact h2 br {
+  display: none;
+}
+body main .contact .contact-texte {
+  margin: 75px 0 60px 80px;
+}
+body main .contact .contact-infos-container {
+  align-items: center;
+  display: flex;
+}
+body main .contact .contact-infos-container .coordonnees {
+  width: 60%;
+  margin-left: 80px;
+}
+body main .contact .contact-infos-container .coordonnees svg {
+  right: 35%;
+  width: 250px;
+}
+body main .contact .contact-infos-container .coordonnees a {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+body main .contact .contact-infos-container .contact-form {
+  width: 40%;
+}
+body main .contact .contact-infos-container .contact-form label {
+  font-size: 1.4em;
+}
+body main .contact .contact-infos-container .contact-form input:not(input[type=submit]) {
+  height: 40px;
+  font-size: 1.2em;
+}
+body main .contact .contact-infos-container .contact-form textarea {
+  height: 300px;
+}
+body main .contact .contact-infos-container .contact-form input[type=submit] {
+  font-size: 1.5em;
+  padding: 12px 20px;
+}/*# sourceMappingURL=style_desktop.css.map */
